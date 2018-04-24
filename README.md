@@ -10,7 +10,7 @@ const abbreviations = require('@ifct2017/abbreviations');
 // abbreviations(<query>)
 // -> {abbr, full} if supported, null otherwise.
 // abbreviations.corpus: Map {key => {abbr, full}}
-// abbreviations.csv: path of csv file
+// abbreviations.csv(): path of csv file
 
 abbreviations('GLVs');
 abbreviations('g l v s');
