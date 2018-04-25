@@ -21,7 +21,7 @@ function abbreviations(txt) {
   var txt = txt.replace(REPLACE, (m, p1) => {
     var v = m.replace(/\W/g, '');
     return v.length===1? `${m.trim()} `:`${v} `
-  });
+  }).toLowerCase();
   var m = txt.match(MATCH);
   if(m==null) return null;
   return corpus.get(m[2].replace('.', ''));
