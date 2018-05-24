@@ -1,6 +1,6 @@
 {
   "name": "@ifct2017/abbreviations",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Abbreviations of Indian Food Composition Tables 2017.",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,11 @@
   "keywords": [
     "ifct",
     "2017",
-    "abbreviations"
+    "abbreviations",
+    "indian",
+    "food",
+    "composition",
+    "tables"
   ],
   "author": "wolfram77@gmail.com",
   "license": "MIT",
@@ -23,5 +27,8 @@
   "homepage": "https://github.com/ifct2017/abbreviations#readme",
   "devDependencies": {
     "csv": "^2.0.0"
+  },
+  "dependencies": {
+    "sql-extra": "^0.1.3"
   }
 }
