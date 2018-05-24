@@ -1,8 +1,14 @@
+const Sql = require('sql-extra');
 const path = require('path');
 const corpus = require('./corpus');
 
 function csv() {
   return path.join(__dirname, 'index.csv');
+};
+
+function sql(tab='abbreviations', opt={}) {
+  return Sql.setupTable(tab, {abbr: 'TEXT', full: 'TEXT'}, corpus.values(),
+    Object.assign({pk: 'abbr', index: true, tsvector: {abbr: 'A', full: 'B'}}, opt));
 };
 
 function createRegex(lst) {
@@ -28,5 +34,6 @@ function abbreviations(txt) {
 };
 
 abbreviations.csv = csv;
+abbreviations.sql = sql;
 abbreviations.corpus = corpus;
 module.exports = abbreviations;
