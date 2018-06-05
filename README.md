@@ -7,11 +7,16 @@ Check supported [abbreviations].
 
 ```javascript
 const abbreviations = require('@ifct2017/abbreviations');
-// abbreviations(<query>)
-// -> {abbr, full} if supported, null otherwise.
 // abbreviations.corpus: Map {key => {abbr, full}}
+// abbreviations.load(): true (corpus loaded)
 // abbreviations.sql([table], [options]): sql commands
 // abbreviations.csv(): path of csv file
+// abbreviations(<query>)
+// -> {abbr, full} if supported, null otherwise.
+
+
+abbreviations.load();
+/* load corpus first */
 
 abbreviations('GLVs');
 abbreviations('g l v s');
