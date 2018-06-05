@@ -26,7 +26,7 @@ function csv() {
 };
 
 function sql(tab='abbreviations', opt={}) {
-  return Sql.setupTable(tab, {abbr: 'TEXT', full: 'TEXT'}, corpus.values(),
+  return Sql.setupTable(tab, {abbr: 'TEXT', full: 'TEXT'}, require('./corpus').values(),
     Object.assign({pk: 'abbr', index: true, tsvector: {abbr: 'A', full: 'B'}}, opt));
 };
 
