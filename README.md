@@ -1,4 +1,4 @@
-[Abbreviations] of [Indian Food Composition Tables 2017].<br>
+[Abbreviations] of [Indian Food Composition Tables 2017].
 
 ```javascript
 const abbreviations = require('@ifct2017/abbreviations');
