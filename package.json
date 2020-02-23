@@ -1,6 +1,6 @@
 {
   "name": "@ifct2017/abbreviations",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Full forms of abbreviations used in the original book.",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/ifct2017/abbreviations#readme",
   "devDependencies": {
-    "csv": "5.3"
+    "csv-parse": "4.8"
   },
   "dependencies": {
     "sql-extra": "0.1"
