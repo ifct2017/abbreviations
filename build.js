@@ -8,16 +8,21 @@ var stream = fs.createReadStream('index.csv').pipe(csvParse({columns: true, comm
 
 
 
-stream.on('data', (r) => {
+function writeFile(pth, d) {
+  d = d.replace(/\r?\n/g, os.EOL);
+  fs.writeFileSync(pth, d);
+}
+
+
+stream.on('data', r => {
   map.set(r.abbr.toLowerCase().replace(/\W/g, ''), {abbr: r.abbr, full: r.full});
 });
 
-
 stream.on('end', () => {
-  var z = `const CORPUS = new Map([${os.EOL}`;
-  for(var [k, v] of map)
-    z += `  ["${k}", ${JSON.stringify(v).replace(/\"(\w+)\":/g, '$1:')}],${os.EOL}`;
-  z += `]);${os.EOL}`;
-  z += `module.exports = CORPUS;${os.EOL}`;
-  fs.writeFileSync('corpus.js', z);
+  var a = `const CORPUS = new Map([\n`;
+  for (var [k, v] of map)
+    a += `  ["${k}", ${JSON.stringify(v).replace(/\"(\w+)\":/g, '$1:')}],\n`;
+  a += `]);\n`;
+  a += `module.exports = CORPUS;\n`;
+  writeFile('corpus.js', a);
 });
