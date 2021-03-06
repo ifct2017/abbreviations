@@ -5,7 +5,7 @@ Full forms of [abbreviations] used in the original book.
 ```javascript
 const abbreviations = require('@ifct2017/abbreviations');
 // abbreviations(<query>)
-// -> {abbr, full} if found, null otherwise.
+// → {abbr, full} if found, null otherwise.
 
 
 abbreviations('GLV');
