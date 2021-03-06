@@ -3,7 +3,7 @@ export interface AbbreviationRow {
   abbr: string,
   /** Full form. */
   full: string
-};
+}
 
 
 /**
