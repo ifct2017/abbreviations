@@ -17,9 +17,9 @@ abbreviations('d. r. i. stands for?');
 // { abbr: 'DRI', full: 'Dietary reference intake' }
 
 
-/// Note:
-/// Full stops must immediately follow character, if present.
-/// For single character abbreviations, full stop is mandatory.
+// Note:
+// Full stops must immediately follow character, if present.
+// For single character abbreviations, full stop is mandatory.
 
 
 // Additional methods:

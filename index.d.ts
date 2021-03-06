@@ -37,18 +37,18 @@ export function load() : Map<string, AbbreviationRow>;
  * @returns found => {abbr, full}, else => null
  * @example
  * ```javascript
- * abbreviations.load();
- * /// load corpus first
- *
  * abbreviations('GLV');
  * abbreviations('g l v');
- * // Green Leafy Vegetables
+ * // { abbr: 'GLV', full: 'Green Leafy Vegetables' }
  *
  * abbreviations('what is D.R.I.');
  * abbreviations('d. r. i. stands for?');
- * /// full stops must immediately follow character, if present
- * /// for single character abbreviations, full stop is mandatory
- * // Dietary reference intake
+ * // { abbr: 'DRI', full: 'Dietary reference intake' }
+ *
+ *
+ * // Note:
+ * // for single character abbreviations, full stop is mandatory
+ * // full stops must immediately follow character, if present
  * ```
  */
 function abbreviations(txt: string): AbbreviationRow | null;
