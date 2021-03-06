@@ -1,11 +1,11 @@
 {
   "name": "@ifct2017/abbreviations",
-  "version": "1.0.14",
+  "version": "2.0.0",
   "description": "Full forms of abbreviations used in the original book.",
   "main": "index.js",
   "scripts": {
     "build": "node ./build",
-    "test": "exit"
+    "test": "node ./test"
   },
   "repository": {
     "type": "git",
