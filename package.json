@@ -1,6 +1,6 @@
 {
   "name": "@ifct2017/abbreviations",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Full forms of abbreviations used in the original book.",
   "main": "index.js",
   "scripts": {
