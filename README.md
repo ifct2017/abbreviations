@@ -8,13 +8,13 @@ const abbreviations = require('@ifct2017/abbreviations');
 // -> {abbr, full} if found, null otherwise.
 
 
-abbreviations('GLVs');
-abbreviations('g l v s');
-// Green Leafy Vegetables
+abbreviations('GLV');
+abbreviations('g l v');
+// { abbr: 'GLV', full: 'Green Leafy Vegetables' }
 
 abbreviations('what is D.R.I.');
 abbreviations('d. r. i. stands for?');
-// Dietary reference intake
+// { abbr: 'DRI', full: 'Dietary reference intake' }
 
 
 /// Note:
