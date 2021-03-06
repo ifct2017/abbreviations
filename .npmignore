@@ -1,6 +1,6 @@
 # data
 index.txt
-index.csv
 
 # scripts
 build.js
+test.js
