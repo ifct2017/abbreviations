@@ -27,7 +27,7 @@ function load() {
 
 
 function sql(tab='abbreviations', opt={}) {
-  return esql.setupTable(tab, {abbr: 'TEXT', full: 'TEXT'}, require('./corpus').values(),
+  return esql.setupTable(tab, {abbr: 'TEXT', full: 'TEXT'}, load().values(),
     Object.assign({pk: 'abbr', index: true, tsvector: {abbr: 'A', full: 'B'}}, opt));
 }
 
@@ -50,5 +50,4 @@ function abbreviations(txt) {
 abbreviations.csv = csv;
 abbreviations.sql = sql;
 abbreviations.load = load;
-abbreviations.corpus = corpus;
 module.exports = abbreviations;

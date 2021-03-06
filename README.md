@@ -4,16 +4,9 @@ Full forms of [abbreviations] used in the original book.
 
 ```javascript
 const abbreviations = require('@ifct2017/abbreviations');
-// abbreviations.corpus: Map {key => {abbr, full}}
-// abbreviations.load(): true (corpus loaded)
-// abbreviations.sql([table], [options]): sql commands
-// abbreviations.csv(): path of csv file
 // abbreviations(<query>)
-// -> {abbr, full} if supported, null otherwise.
+// -> {abbr, full} if found, null otherwise.
 
-
-abbreviations.load();
-/* load corpus first */
 
 abbreviations('GLVs');
 abbreviations('g l v s');
@@ -21,10 +14,21 @@ abbreviations('g l v s');
 
 abbreviations('what is D.R.I.');
 abbreviations('d. r. i. stands for?');
-/* (full stops must immediately follow character, if present) */
-/* (for single character abbreviations, full stop is mandatory) */
 // Dietary reference intake
+
+
+/// Note:
+/// Full stops must immediately follow character, if present.
+/// For single character abbreviations, full stop is mandatory.
+
+
+// Additional methods:
+// abbreviations.load(): load corpus now
+// abbreviations.sql([table], [options]): sql statements
+// abbreviations.csv(): path of csv file
 ```
+
+
 
 
 [![ifct2017](http://ifct2017.com/ifct_2017.jpg)](https://www.npmjs.com/package/ifct2017)
