@@ -1,10 +1,13 @@
 Full forms of [abbreviations] used in the original book.
+
 > This is part of package [ifct2017].<br>
-> Source: [Indian Food Composition Tables 2017].
+> Online database: [ifct2017.github.io].
+
+<br>
 
 ```javascript
 const abbreviations = require('@ifct2017/abbreviations');
-// abbreviations(<query>)
+// abbreviations(query)
 // → {abbr, full} if found, null otherwise.
 
 
@@ -20,19 +23,21 @@ abbreviations('d. r. i. stands for?');
 // Note:
 // Full stops must immediately follow character, if present.
 // For single character abbreviations, full stop is mandatory.
-
-
-// Additional methods:
-// abbreviations.load(): load corpus now
-// abbreviations.sql([table], [options]): sql statements
-// abbreviations.csv(): path of csv file
 ```
 
+```javascript
+// Additional methods:
+abbreviations.load() // → corpus
+abbreviations.sql([table], [options]) // → sql statements
+abbreviations.csv() // → path of csv file
+```
 
+<br>
+<br>
 
+[![](https://i.imgur.com/D5UYmbD.jpg)](https://www.npmjs.com/package/ifct2017)
 
-[![ifct2017](http://ifct2017.com/ifct_2017.jpg)](https://www.npmjs.com/package/ifct2017)
-> You can ask about composition of 528 key foods in India here: [ifct2017.github.io].<br>
+> Data was obtained from the book [Indian Food Composition Tables 2017].<br>
 > Food composition values were measured by [National Institute of Nutrition, Hyderabad].<br>
 > Take a peek at the raw data here: [Document], [Webpage].
 
