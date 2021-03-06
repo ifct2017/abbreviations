@@ -1,9 +1,10 @@
 {
   "name": "@ifct2017/abbreviations",
-  "version": "1.0.11",
+  "version": "1.0.13",
   "description": "Full forms of abbreviations used in the original book.",
   "main": "index.js",
   "scripts": {
+    "build": "node ./build",
     "test": "exit"
   },
   "repository": {
@@ -17,20 +18,7 @@
     "indian",
     "food",
     "composition",
-    "tables",
-    "aas",
-    "aoac",
-    "apci",
-    "bmr",
-    "boaa",
-    "bv",
-    "cal",
-    "cbc",
-    "cf",
-    "cftri",
-    "chd",
-    "cho",
-    "crm"
+    "tables"
   ],
   "author": "wolfram77@gmail.com",
   "license": "MIT",
