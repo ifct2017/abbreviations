@@ -1,4 +1,4 @@
-export interface AbbreviationRow {
+export interface Abbreviation {
   /** Abbreviation. */
   abbr: string,
   /** Full form. */
@@ -11,7 +11,7 @@ export interface AbbreviationRow {
  * [📦](https://www.npmjs.com/package/@ifct2017/abbreviations)
  * @returns corpus {key => {abbr, full}}
  */
-export function load() : Map<string, AbbreviationRow>;
+export function load() : Map<string, Abbreviation>;
 
 
 /**
@@ -19,7 +19,7 @@ export function load() : Map<string, AbbreviationRow>;
  * [📦](https://www.npmjs.com/package/@ifct2017/abbreviations)
  * @returns CREATE TABLE, INSERT, CREATE VIEW, CREATE INDEX statements
  */
- export function sql() : string;
+ export function sql(tab: string='abbreviations', opt: object={}) : string;
 
 
 /**
@@ -51,5 +51,5 @@ export function load() : Map<string, AbbreviationRow>;
  * // full stops must immediately follow character, if present
  * ```
  */
-function abbreviations(txt: string): AbbreviationRow | null;
+function abbreviations(txt: string): Abbreviation | null;
 export = abbreviations;

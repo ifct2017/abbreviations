@@ -1,5 +1,5 @@
 const assert = require('assert');
-const abbreviations = require('./')
+const abbreviations = require('./');
 
 
 
