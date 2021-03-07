@@ -9,7 +9,7 @@ export interface Abbreviation {
 /**
  * Loads corpus to enable queries.
  * [📦](https://www.npmjs.com/package/@ifct2017/abbreviations)
- * @returns corpus {key => {abbr, full}}
+ * @returns corpus {key ⇒ {abbr, full}}
  */
 export function load() : Map<string, Abbreviation>;
 
@@ -34,7 +34,7 @@ export function load() : Map<string, Abbreviation>;
  * Finds matching full form of an abbreviation query.
  * [📦](https://www.npmjs.com/package/@ifct2017/abbreviations)
  * @param txt abbreviation query
- * @returns found => {abbr, full}, else => null
+ * @returns found ⇒ {abbr, full}, else ⇒ null
  * @example
  * ```javascript
  * abbreviations('GLV');
